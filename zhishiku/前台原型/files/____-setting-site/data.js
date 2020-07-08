@@ -1,0 +1,65 @@
+﻿$axure.loadCurrentPage({
+  "url":"____-setting-site.html",
+  "generationDate":new Date(1592623290345),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"f9d9085f37ab42189c9c7f7910f46f94",
+    "type":"Axure:Page",
+    "name":"站点设置-setting-site",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"20242675a81a4af2834b64f0e9dc22a2",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "size":{
+              "width":1140,
+              "height":510}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"37e0685c96a44d27bb3caa2a17055259",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "size":{
+                  "width":1140,
+                  "height":510}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/____-setting-site/u0.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "20242675a81a4af2834b64f0e9dc22a2":{
+      "scriptId":"u0"},
+    "37e0685c96a44d27bb3caa2a17055259":{
+      "scriptId":"u1"}}});

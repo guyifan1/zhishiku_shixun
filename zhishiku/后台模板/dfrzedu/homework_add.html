@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-DFRZ</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/xadmin.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/xadmin.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+	
+	<body>
+	<div class="x-body layui-anim layui-anim-up">
+	    <form class="layui-form">
+	        <input type="hidden" id="id" name="id"/>
+	        <div class="layui-form-item">
+	            <label for="uname" class="layui-form-label">
+	                <span class="x-red">*</span>作业标题
+	            </label>
+	            <div class="layui-input-inline">
+	                <input type="text"  id="uname" name="uname" required="" lay-verify="uname"
+	                       autocomplete="off" class="layui-input">
+	            </div>
+	        </div>
+	        <div class="layui-form-item">
+	            <label for="email" class="layui-form-label">
+	                <span class="x-red">*</span>作业描述
+	            </label>
+	            <div style="width: 500px;">
+	                 <textarea id="demo" style="display: none;"></textarea>
+	            </div>
+	            
+	        </div>
+	
+	        
+	        <div class="layui-form-item">
+	            <label for="L_repass" class="layui-form-label">
+	                <span class="x-red">*</span>添加附件
+	            </label>
+	            <div>
+	                <button type="button" class="layui-btn" id="test1">
+	                    <i class="layui-icon">&#xe64a;</i>图片
+	                </button>  
+					<button type="button" class="layui-btn layui-btn-danger" id="test2">
+						<i class="layui-icon">&#xe6ed;</i>视频
+					</button> 
+					<button type="button" class="layui-btn layui-btn-normal" id="test2">
+						<i class="layui-icon">&#xe655;</i>PDF/Word
+					</button> 
+	            </div>
+	        </div>
+			<div class="layui-form-item">
+			    <label for="email" class="layui-form-label">
+			        <span class="x-red">*</span>发布范围
+			    </label>
+			    <div>
+			         <div class="layui-input-block">
+					  <input type="checkbox" name="like[write]" title="J2EE应用开发课程">
+					  <input type="checkbox" name="like[read]" title="H5前端开发课程" checked>
+					  <input type="checkbox" name="like[dai]" title="大数据分析课程">
+					</div>
+			    </div>
+			    
+			</div>
+			<div class="layui-form-item">
+			    <label for="email" class="layui-form-label">
+			        <span class="x-red">*</span>截止时间
+			    </label>
+			   <div class="layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+			     <input type="text" class="layui-input" id="endtime">
+			   </div>
+			    
+			</div>
+	       <!-- <div class="layui-form-item">
+	            <label for="L_repass" class="layui-form-label">
+	                <span class="x-red">*</span>详细信息
+	            </label>
+	            <div>
+	                <textarea id="demo" style="display: none;"></textarea>
+	            </div>
+	        </div>
+	-->
+	
+	        <div class="layui-form-item">
+	            <label for="L_repass" class="layui-form-label">
+	            </label>
+	            <button  class="layui-btn" lay-filter="edit" lay-submit="">
+	                布 置
+	            </button>
+	        </div>
+	    </form>
+	</div>
+	<script th:inline="javascript" type="text/javascript">
+	    var ctxPath=[[${#httpServletRequest.getContextPath()}]];
+	</script>
+	<script>
+	layui.use('laydate', function(){
+	  var laydate = layui.laydate;
+	  
+	  //执行一个laydate实例
+	  laydate.render({
+	    elem: '#endtime' //指定元素
+	  });
+	});
+	</script>
+	<script>
+	    layui.use('upload', function(){
+	        var upload = layui.upload;
+	
+	        //执行实例
+	        var uploadInst = upload.render({
+	            elem: '#test1' //绑定元素
+	            ,url: ctxPath+'/user/upload' //上传接口
+	            ,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
+	                layer.load(); //上传loading
+	            }
+	            ,done: function(res){
+	                //上传完毕回调
+	                layer.msg("上传成功");
+	                $("#headpic_img").show();
+	                $("#headpic_img").attr("src",ctxPath+"/img/user/"+res.data.src);
+	                $("#headpic").val(res.data.src);
+	                layer.closeAll('loading'); //关闭loading
+	            }
+	            ,error: function(){
+	                //请求异常回调
+	                alert("请求异常回调");
+	            }
+	        });
+	    });
+	</script>
+	
+	
+	<script>
+	    layui.use('layedit', function(){
+	        var layedit = layui.layedit;
+	        layedit.build('demo'); //建立编辑器
+	    }); 
+	</script>
+	<script>
+	    layui.use(['form','layer'], function(){
+	        $ = layui.jquery;
+	        var form = layui.form
+	            ,layer = layui.layer;
+	
+	        //自定义验证规则
+	            form.verify({
+	                uname: function(value){
+	                    if(value.length < 5){
+	                        return '用户名至少得5个字符啊';
+	                    }
+	                }
+	                ,upass: [/(.+){6,12}$/, '密码必须6到12位']
+	                ,repass: function(value){
+	                    if($('#L_pass').val()!=$('#L_repass').val()){
+	                        return '两次密码不一致';
+	                    }
+	                }
+	        });
+	
+	        //监听提交
+	        form.on('submit(edit)', function(data){
+	            console.log(data);
+	            //发异步，把数据提交给服务端
+	            $.ajax({
+	                url:ctxPath+'/user/editUser',
+	                type:'post',
+	                data:data.field,
+	                dataType:"json",
+	                success:function(data){
+	                    if(data.data=="1"){
+	                        layer.msg("修改成功",function(){
+	                            //关闭层
+	                            x_admin_close();
+	                        });
+	                    }
+	                    else{
+	                        layer.alert("修改失败！");
+	                    }
+	                }
+	            });
+	            layer.alert("增加成功", {icon: 6},function () {
+	                // 获得frame索引
+	                var index = parent.layer.getFrameIndex(window.name);
+	                //关闭当前frame
+	                parent.layer.close(index);
+	            });
+	            return false;
+	        });
+	
+	
+	    });
+	</script>
+	
+	<script>
+	    getUserAjax();
+	    function getUserAjax(){
+	       // $("#update_user_id").val(data.id);
+	        //var id=$("#update_user_id").val();
+	        var id=window.parent.document.getElementById("update_user_id").value;
+	        //发异步，把数据提交给服务端
+	        $.ajax({
+	            url:ctxPath+'/user/getUser/'+id,
+	            type:'get',
+	            dataType:"json",
+	            success:function(data){
+	                $("#id").val(data.data.id);
+	                $("#uname").val(data.data.uname);
+	                $("#upass").val(data.data.upass);
+	                $("#repass").val(data.data.upass);
+	                $("#email").val(data.data.email);
+	                $("#headpic").val(data.data.headpic);
+	                $("#isenabled").val(data.data.isenabled);
+	                $("#headpic_img").show();
+	                $("#headpic_img").attr("src",ctxPath+"/img/user/"+data.data.headpic);
+	            }
+	        });
+	    }
+	
+	</script>
+	<script>var _hmt = _hmt || []; (function() {
+	    var hm = document.createElement("script");
+	    hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(hm, s);
+	})();</script>
+	</body>
+</html>

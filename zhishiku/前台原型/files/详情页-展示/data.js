@@ -1,0 +1,145 @@
+﻿$axure.loadCurrentPage({
+  "url":"详情页-展示.html",
+  "generationDate":new Date(1592623290127),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"a3d8892091d44842aa98b1e691e03f7d",
+    "type":"Axure:Page",
+    "name":"详情页-展示",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"8e117628ebdd46689ace1f6a7045ae13",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":230.000030517578,
+              "y":0},
+            "size":{
+              "width":912,
+              "height":500}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"246b6b33c8bc4e91aa839a98f40b3052",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":230.000030517578,
+                  "y":0},
+                "size":{
+                  "width":912,
+                  "height":500}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/详情页-展示/u0.jpg"}},
+{
+          "id":"c9d9fb563ba34c75a6dae3db3f19f110",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":220,
+              "y":490},
+            "size":{
+              "width":932,
+              "height":270}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"630849eecef14f81a480cbc13b375587",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":220,
+                  "y":490},
+                "size":{
+                  "width":932,
+                  "height":270}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/详情页-展示/u2.jpg"}},
+{
+          "id":"11e7373c7bde4c579155dfb5bae9b8ed",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":50,
+              "y":115},
+            "size":{
+              "width":206,
+              "height":15}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"f7c9bd0595544ab78a296b8a120b81cf",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":50,
+                  "y":115},
+                "size":{
+                  "width":206,
+                  "height":15}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "8e117628ebdd46689ace1f6a7045ae13":{
+      "scriptId":"u0"},
+    "246b6b33c8bc4e91aa839a98f40b3052":{
+      "scriptId":"u1"},
+    "c9d9fb563ba34c75a6dae3db3f19f110":{
+      "scriptId":"u2"},
+    "630849eecef14f81a480cbc13b375587":{
+      "scriptId":"u3"},
+    "11e7373c7bde4c579155dfb5bae9b8ed":{
+      "scriptId":"u4"},
+    "f7c9bd0595544ab78a296b8a120b81cf":{
+      "scriptId":"u5"}}});

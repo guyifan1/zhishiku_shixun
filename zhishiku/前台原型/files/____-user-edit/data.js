@@ -1,0 +1,102 @@
+﻿$axure.loadCurrentPage({
+  "url":"____-user-edit.html",
+  "generationDate":new Date(1592623290451),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"6f34d7aaac374d89a46225f76612df42",
+    "type":"Axure:Page",
+    "name":"编辑用户-user-edit",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"1e609f1e5d3445698365395e98ec22ab",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "size":{
+              "width":1253,
+              "height":593}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"5908a877c4f9438bb0b676d87c7f67e8",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "size":{
+                  "width":1253,
+                  "height":593}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/____-user-edit/u0.png"}},
+{
+          "id":"59563ac9b31e490a9649c8e62b88efe5",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":190,
+              "y":554},
+            "size":{
+              "width":1110,
+              "height":466}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"821dcbe5f806447b8e9de4331c483fe4",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":190,
+                  "y":554},
+                "size":{
+                  "width":1110,
+                  "height":466}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/____-user-edit/u2.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "1e609f1e5d3445698365395e98ec22ab":{
+      "scriptId":"u0"},
+    "5908a877c4f9438bb0b676d87c7f67e8":{
+      "scriptId":"u1"},
+    "59563ac9b31e490a9649c8e62b88efe5":{
+      "scriptId":"u2"},
+    "821dcbe5f806447b8e9de4331c483fe4":{
+      "scriptId":"u3"}}});

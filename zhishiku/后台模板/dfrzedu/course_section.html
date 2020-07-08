@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="./lib/layui/css/layui.css"  media="all">
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+<div class="layui-btn-container">
+  <button type="button" class="layui-btn layui-btn-sm" lay-demo="getChecked">获取选中节点数据</button>
+  <button type="button" class="layui-btn layui-btn-sm" lay-demo="setChecked">勾选指定节点</button>
+  <button type="button" class="layui-btn layui-btn-sm" lay-demo="reload">重载实例</button>
+</div>
+ 
+
+
+ 
+<div id="test9" class="demo-tree demo-tree-box" style="width: 200px; height: 300px; overflow:scroll"></div>
+<input id="tree_id" type="hidden" />
+<script src="./lib/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use(['tree', 'util'], function(){
+  var tree = layui.tree
+  ,layer = layui.layer
+  ,util = layui.util
+  
+  
+  
+  //模拟数据1
+  ,data1 = [{
+    title: '第一阶段2'
+    ,id: 1
+    ,children: [{
+      title: 'Java编程逻辑'
+      ,id: 1000
+      
+    },{
+      title: 'Java面向对象1'
+      ,id: 1001
+    },{
+      title: 'Java面向对象2'
+      ,id: 1002
+    }]
+  },{
+    title: '第二阶段'
+    ,id: 2
+    ,children: [{
+      title: 'HTML基础'
+      ,id: 2000
+    },{
+      title: 'CSS样式'
+      ,id: 2001
+    }]
+  },{
+    title: '第三阶段'
+    ,id: 3
+    ,children: [{
+      title: 'SpringIOC'
+      ,id: 3000
+    },{
+      title: 'MyBatis'
+      ,id: 3001
+    }]
+  }]
+  
+
+ 
+ 
+ 
+  
+ 
+  //开启节点操作图标
+  tree.render({
+    elem: '#test9'
+    ,data: data1
+    ,edit: ['add', 'update', 'del'] //操作节点的图标
+    ,click: function(obj){
+      layer.msg(JSON.stringify(obj.data));
+	  _evaluation.search(currTreeId);
+	  //当前点击的树节点
+	  var currTreeId = obj.data.id;
+	  //上一次点击的树节点id
+	  var beforeTreeId =  $('#tree_id').val();
+	  alert(beforeTreeId);
+	  //对比前后id，不相同时移除上一个节点的样式，并设置当前点击的节点样式
+	  if (currTreeId !== beforeTreeId){
+		  $('div [data-id="'+currTreeId+'"] div').eq(1).last().css('background-color','#87eaa3');
+		  $('div [data-id="'+beforeTreeId+'"] div').eq(1).last().css('background-color','');
+		  $('#tree_id').val(obj.data.id);
+	  }
+    }
+  });
+});
+</script>
+
+</body>
+</html>

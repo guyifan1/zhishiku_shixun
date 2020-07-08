@@ -1,0 +1,108 @@
+﻿$axure.loadCurrentPage({
+  "url":"账户设置.html",
+  "generationDate":new Date(1592623290288),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"52d84dbc25b344c79ad3f10ec9de56a9",
+    "type":"Axure:Page",
+    "name":"账户设置",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"13042d50fe194a4f911c85eeecdb1477",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":222,
+              "y":0},
+            "size":{
+              "width":658,
+              "height":550}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"2c160af1870c4d60b4450f85c3bece38",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":222,
+                  "y":0},
+                "size":{
+                  "width":658,
+                  "height":550}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/账户设置/u0.png"}},
+{
+          "id":"96c7db99458342f5997f5bd26c070e1c",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":225,
+              "y":550},
+            "size":{
+              "width":658,
+              "height":304}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"63f0819098f14de28c62097b520de7c8",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":225,
+                  "y":550},
+                "size":{
+                  "width":658,
+                  "height":304}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/账户设置/u2.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "13042d50fe194a4f911c85eeecdb1477":{
+      "scriptId":"u0"},
+    "2c160af1870c4d60b4450f85c3bece38":{
+      "scriptId":"u1"},
+    "96c7db99458342f5997f5bd26c070e1c":{
+      "scriptId":"u2"},
+    "63f0819098f14de28c62097b520de7c8":{
+      "scriptId":"u3"}}});
